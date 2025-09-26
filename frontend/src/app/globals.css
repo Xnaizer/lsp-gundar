@@ -54,3 +54,215 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
 }
+
+@media print {
+  body { 
+    margin: 0; 
+    background: white !important; 
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+  
+  .no-print { 
+    display: none !important; 
+  }
+  
+  .print-page { 
+    box-shadow: none !important; 
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+  
+  .page-break {
+    page-break-before: always;
+  }
+}
+
+/* Billing specific styles */
+.billing-layout {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.billing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Animation styles */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.loading-spinner {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* Billing Layout Styles */
+.billing-layout {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.billing-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+/* Print styles */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+  
+  body { 
+    margin: 0 !important; 
+    background: white !important; 
+    font-size: 12pt !important;
+  }
+  
+  .no-print { 
+    display: none !important; 
+  }
+  
+  .print-page { 
+    box-shadow: none !important; 
+    margin: 0 !important;
+    border-radius: 0 !important;
+    background: white !important;
+  }
+  
+  .page-break {
+    page-break-before: always;
+  }
+  
+  /* Ensure colors print correctly */
+  .bg-blue-600, .bg-blue-700, .bg-blue-800 {
+    background-color: #1e40af !important;
+    color: white !important;
+  }
+  
+  .text-blue-600 {
+    color: #1e40af !important;
+  }
+  
+  .bg-green-100 {
+    background-color: #dcfce7 !important;
+  }
+  
+  .text-green-800 {
+    color: #166534 !important;
+  }
+  
+  .bg-yellow-100 {
+    background-color: #fef3c7 !important;
+  }
+  
+  .text-yellow-800 {
+    color: #92400e !important;
+  }
+}
+
+/* Animation styles */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* Loading spinner */
+.loading-spinner {
+  border: 4px solid #f3f4f6;
+  border-top: 4px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Table responsive styles */
+@media (max-width: 768px) {
+  .billing-table {
+    font-size: 14px;
+  }
+  
+  .billing-table th,
+  .billing-table td {
+    padding: 8px 4px;
+  }
+}
+
+/* Debug section styles */
+details summary {
+  transition: all 0.3s ease;
+}
+
+details[open] summary {
+  margin-bottom: 1rem;
+}
+
+/* Button hover effects */
+.btn-hover {
+  transition: all 0.2s ease-in-out;
+  transform: translateY(0);
+}
+
+.btn-hover:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Status badge animations */
+.status-badge {
+  transition: all 0.2s ease-in-out;
+}
+
+.status-badge:hover {
+  transform: scale(1.05);
+}
