@@ -1,0 +1,62 @@
+# Environment files
+.env*
+!.env.example
+
+# Database dumps
+*.sql.backup
+*.dump
+*.backup
+*.bak
+
+# Database files (if using file-based DBs for development)
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# pgAdmin files
+pgadmin4.db
+pgadmin4.log
+
+# Database migration temp files
+migrations/temp/
+migrations/backup/
+
+# Docker volumes data (if using Docker)
+postgres-data/
+mysql-data/
+mongodb-data/
+
+# Query result files
+query-*.csv
+query-*.json
+query-*.txt
+
+# Performance test results
+performance-*.log
+benchmark-*.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+
+# Scripts output
+setup.log
+reset.log
